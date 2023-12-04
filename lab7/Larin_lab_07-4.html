@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+            display: block;
+        }
+        input, textarea{
+            margin-left: 5px;
+            background-color: bisque;
+            border: 2px solid rgb(190, 132, 26);
+            border-radius: 5px;
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 66%; background-color: rgb(202, 174, 176); border: thick double green; margin: 0 auto;">
+        <h1 style="text-align: center; font-size: 30px;">Замовлення товару</h1>
+        <form style="width: 70%; margin: 0 auto;" onsubmit="alert('Ваша заявка прийнята!')">
+            <table>
+                <tr>
+                    <td><label for="IBAN">IBAN:</label></td>
+                    <td><input required type="text" size="15" maxlength="29" id="IBAN"></td>
+                </tr>
+                <tr>
+                    <td><label for="CUS">Номер користувача:</label></td>
+                    <td><input required type="text" name="customer" id="CUS" size="15" maxlength="10"></td>
+                </tr>
+                <tr>
+                    <td>Список товарів:</td>
+                    <td><ul>
+                        <li><input type="checkbox" name="telephone" id="">Телефон</li>
+                        <li><input type="checkbox" name="TV" id="">Телевізор</li>
+                        <li><input type="checkbox" name="laptop" id="">Ноутбук</li>
+                        <li><input type="checkbox" name="PC" id="">Комп'ютер</li>
+                        <li><input type="checkbox" name="monitor" id="">Монітор</li>
+                    </ul></td>
+                </tr>
+                <tr>
+                    <td>Коментар:</td>
+                    <td><textarea name="comment" id="" cols="20" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Спосіб оплати:</td>
+                    <td><input required type="radio" name="pay">готівка <input type="radio" name="pay" id="">картка</td>
+                </tr>
+                <tr>
+                    <td>Електронна пошта:</td>
+                    <td><input type="email"></td>
+                </tr>
+                <tr>
+                    <td>Додаткова інформація:</td>
+                    <td><input type="checkbox" name="zal">Залишок<br> <input type="checkbox" name="vup" id="">Останні виплати</td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Відправити"></td>
+                    <td><input type="reset" value="Скинути дані"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
